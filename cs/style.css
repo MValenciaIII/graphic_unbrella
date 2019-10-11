@@ -1,9 +1,25 @@
+/* MAIN HOMEPAGE */
 html {
     scroll-behavior: smooth;
 }
 
-main header {
+@media(max-width: 767px) {
+    .header img {
+        display: none;
+    }
+    .header h1, h3 {
+        text-align: center;
+    }
+}
+
+
+
+main, header {
     background: url(../media/pattern.jpg);
+}
+
+main, footer {
+    font-family: 'Armata', 'Open Sans', sans-serif;
 }
 
 header h1 {
@@ -22,8 +38,16 @@ header h3 {
     margin-top: 10px;
 }
 
+.header img {
+    width: 100%
+}
+
 header span {
     color: #475522;
+}
+
+.header {
+    padding-bottom: 20px;
 }
 
 nav ul {
@@ -34,6 +58,10 @@ nav ul {
 nav li {
     display: inline;
     padding: 0px 20px;
+}
+
+.li_Four {
+    padding-left: 50px;
 }
 
 nav a {
@@ -47,8 +75,12 @@ nav a:hover {
 
 .hero_background {
     background-color: #a0c63f;
+    margin-bottom: 30px;
 }
 
+.services {
+    margin-bottom: 20px;
+}
 
 .services h2 {
     text-align: center;
@@ -76,10 +108,28 @@ nav a:hover {
     .services img {
         margin-left: 35px;
     }
+    
+}
+
+.portfolio {
+    margin-bottom: 30px;
+}
+
+.portfolio h2 {
+    margin-bottom: 30px;
+}
+
+.portfolio h3 {
+    margin-top: 10px;
 }
 
 .portfolio span {
     color: #8db43f
+}
+
+.whiteBox {
+    background-color: white;
+    margin-bottom: 30px;
 }
 
 
@@ -91,10 +141,130 @@ nav a:hover {
     margin-right: 20px;
 }
 
+.advertisersIcons {
+    margin-bottom: 30px;
+}
+
+.backToTop {
+    margin-bottom: 30px;
+}
+
+.advertisers h2 {
+    margin-bottom: 30px;
+}
+
 .advertisers span {
     color: #82a638
 }
 
 .backToTop img {
     border-radius: 36px;
+}
+
+.aboutUs a {
+    color: #1e1e20;
+}
+
+.aboutUs a:hover {
+    color: #1e1e20;
+    text-decoration: none;
+}
+
+.archives p {
+    border-bottom: #c2c2c2 solid 1px;
+    margin-bottom: 20px;
+
+}
+
+.contactTwo {
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #202020;
+}
+
+.footer a {
+    color: #c7c7c7;
+    margin-right: 10px;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: #c7c7c7;
+}
+
+.footer p {
+    color: #c7c7c7;
+    float: right;
+}
+
+.newsletter input {
+    padding: 10px;
+}
+
+.newsletter input {
+    margin: 10px 0px;
+}
+
+.subscribe input {
+    color: white;
+    background: #8eb53e;
+    padding: 10px 20px;
+    float: right;
+}
+
+/* ABOUT US PAGE */
+
+.greenBar {
+    border: solid 34px #a0c63f;
+    margin-bottom: 40px;
+}
+
+.aboutUs_p p{
+    margin: 30px 0px;
+}
+
+@media (max-width: 767px) {
+    .sidebar_News {
+        display: none;
+    }
+    .sidebar_Heading {
+        display: none;
+    }
+}
+
+/* NEWS PAGE */
+
+.newsContainer {
+    padding-bottom: 150px;
+}
+
+.newsContainer h2 {
+    padding: 10px 0px;
+}
+
+.newsContainer p {
+    border-bottom: #ababab dashed 2px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.sidebar_News h4 {
+    text-align: left;
+    border-bottom: #ababab dashed 2px;
+    padding: 10px;
+}
+
+.sidebar_News li {
+    padding: 5px 0px;
+}
+
+.sidebar_News input {
+    padding: 20px 90px;
+}
+
+.backToTop_MarginBot {
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
