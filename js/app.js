@@ -179,17 +179,72 @@ mooImage.addEventListener("click", () => {
 
 //? Eventlistener
 
+ 
+//? Saving info based each key pressed. (Dynamic Updating)
+// let inputName = document.getElementById("name")
+// //* Created this variable to save input values
+// let savedInfo = "";
 
-//? Saving info based onChange 
-let inputName = document.getElementById("name")
-//* Created this variable to save input values
-let savedInfo = "";
+// console.log(inputName)
 
-console.log(inputName)
 
-inputName.addEventListener("input", () => {
-    let currentInput = inputName.value;
-    savedInfo += currentInput;
-    console.log(savedInfo);
-})
+// inputName.addEventListener("input", () => {
+//     //? this is grabbing the inputBoxes value
+//     //! INNERTEXT IS ONLY FOR HTML text Tags
+    
+    
+//     savedInfo = inputName.value;
+//     console.log(savedInfo);
+// })
 
+
+// //! 2nd Option on saving infomation from a input textbox
+
+// //* THis variable is being used to grab the input value
+// let inputEmail = document.querySelector("#email");
+// //* this variable is being used for the eventListener
+// let subscribeButton = document.querySelector(".subscribe input");
+// let savedEmailInfo = "";
+
+// subscribeButton.addEventListener("click", () => {
+    
+//     savedEmailInfo = inputEmail.value;
+//     //? 
+//     inputEmail.value = "";
+//     console.log(savedEmailInfo);
+// })
+
+//! Saving a list of personal infomation
+
+//? THis is going to hold my detail objects of information
+let subscribeList = [];
+//? This is my object Template to push into the array later
+let personInfo = {
+    name: "", 
+    email: ""
+};
+
+
+//? What's going to activate our input variables to grab the values? 
+//* THis variable is going to be used for my eventListener
+let subscribeButton = document.querySelector(".subscribe input");
+
+subscribeButton.addEventListener("click", grabNewsLetterInfo)
+
+function grabNewsLetterInfo() {
+    //? These variables is going to grab the input NODES (Elements)
+    let inputName = document.querySelector("#name");
+    let inputEmail = document.querySelector("#email");
+
+    //? Setting object new values from the input boxes
+    personInfo.name = inputName.value;
+    personInfo.email = inputEmail.value;
+
+    //? Pushing object into array
+    subscribeList.push(personInfo);
+    console.log(subscribeList);
+
+    //? Clearing out the input boxes
+    inputName.value = "";
+    inputEmail.value = ""
+}
