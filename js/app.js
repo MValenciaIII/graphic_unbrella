@@ -80,3 +80,116 @@ function stylingText() {
 }
 
 serviceImageOne.addEventListener("click", stylingText);
+
+
+//#region DOM PROBLEMS
+//! DOM Problems
+
+//! 1. If mobile image is clicked, change navText color to 
+//? BLUE
+
+//? THIS IS THE MOBILE IMG NODE
+let mobileImg = document.querySelector(".mobileImg");
+
+mobileImg.addEventListener("click", () => {
+    //? THIS IS A ARRAY LIST OF all the "a" tags in the header
+    let navText = document.querySelectorAll("nav a")
+    console.log(navText);
+    // navText[0].style.color = "blue"
+    // navText[1].style.color = "blue"
+
+    for (let i = 0; i < navText.length; i++) {
+        const currentText = navText[i];
+        
+        navText[i].style.color = "blue";
+    }
+} )
+
+//! 2. If Pizza is still on the page. Find where to revert it to original word
+serviceColumns[2].innerHTML = "Design";
+
+//? Grabbing a elements text value;
+let webTitle = document.querySelector(".webIcon h3").innerText;
+//? This way works too
+//* webTitle.innerText
+
+
+console.log(webTitle);
+
+
+//!3. Console.log("I'ma Mr.Portfolio") if Hovered over portfolio word on website
+
+let portfolioJSText = document.getElementById("portfolioText");
+console.log(portfolioJSText);
+
+function mrPortfolio() {
+    console.log("I'ma Mr.Portfolio!");
+}
+
+portfolioJSText.addEventListener("mouseover", mrPortfolio);
+
+
+//! 4. 
+
+let greenPortfolioTags = document.querySelectorAll(".greenBoxSpan span p");
+
+//? HOW TO CHANGE THE BACKGROUND FOR THESE ELEMENTS V
+// greenPortfolioTags[0].style.backgroundColor = "purple";
+
+function purpleTags() {
+    for (let i = 0; i < greenPortfolioTags.length; i++) {
+        const element = greenPortfolioTags[i];
+        
+        greenPortfolioTags[i].style.backgroundColor = "purple"
+
+    }
+}
+
+
+
+purpleTags();
+
+
+//! 5. 
+
+let mooImage = document.querySelector(".mooImage");
+console.log(mooImage);
+
+
+mooImage.addEventListener("click", () => {
+    let portfolioHeaders = document.querySelectorAll(".greenBoxSpan h3");
+    console.log(portfolioHeaders);
+
+    for (let i = 0; i < portfolioHeaders.length; i++) {
+        const element = portfolioHeaders[i];
+        
+        portfolioHeaders[i].style.fontSize = "60px";
+    }
+})
+
+//#endregion
+
+
+
+
+//! Input boxes
+//? Grabbing values
+//? onchanges
+//?
+
+//? Eventlistener
+
+
+//? Saving info based onChange 
+let inputName = document.getElementById("name")
+//* Created this variable to save input values
+let savedInfo = "";
+
+console.log(inputName)
+
+inputName.addEventListener("input", () => {
+    let currentInput = inputName.value;
+    savedInfo += currentInput;
+    console.log(savedInfo);
+})
+
