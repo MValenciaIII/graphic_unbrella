@@ -34,15 +34,16 @@ serviceHeading.innerHTML = "AMAZING"
 serviceColumns[2].innerHTML = "Pizza"
 
 
-function styleCenter() {
-    for (let i = 0; i < serviceColumns.length; i++) {
-        const element = serviceColumns[i];
+// function styleCenter() {
+//     for (let i = 0; i < serviceColumns.length; i++) {
+//         const element = serviceColumns[i];
         
-        serviceColumns[i].style.textAlign = "center";
-    }
+//         serviceColumns[i].style.fontSize = "center";
+//     }
 
-}
+// }
 
+// styleCenter();
 
 //? Styling Elements
 //* https://www.w3schools.com/jsref/dom_obj_style.asp
@@ -51,3 +52,31 @@ function styleCenter() {
 // serviceSupport.style.fontSize = "60px"
 
 
+//? EVENT LISTENERS
+
+//! THIS IS A IMAGE ELEMENT
+let serviceImageOne = document.querySelector(".amazingIcon img")
+
+console.log(serviceImageOne);
+
+//serviceImageOne.addEventListener("mouseover", onImagePress)
+
+function onImagePress() {
+    console.log("Hey ya pressed me!")
+}
+
+//! THIS IS LIST OF H3 elements
+let servicesText = document.querySelectorAll(".services h3")
+
+console.log(servicesText);
+
+function stylingText() {
+    for (let i = 0; i < servicesText.length; i++) {
+        const element = servicesText[i];
+        
+        servicesText[i].style.color = "green";
+        servicesText[i].style.fontSize = "60px";
+    }
+}
+
+serviceImageOne.addEventListener("click", stylingText);
